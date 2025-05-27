@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game result</title>
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&family=Zen+Dots&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Inter;
+    }
+
+    body {
+        min-height: 100dvh;
+        overflow: hidden;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        background-image: url(bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        user-select: none;
+    }
+
+    .total {
+        padding: 20px;
+        margin-top: 100px;
+        background-color: rgba(255, 255, 255, 0.164);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    .title h1 {
+        font-size: 27px;
+        color: white;
+        text-transform: uppercase;
+    }
+    .title p {
+        color: white;
+        font-size: 23px;
+    }
+    #result {
+        margin-top: 30px;
+        font-size: 23px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.342);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .buttonhome {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+        width: 200px;
+    }
+    .buttonhome button {
+        width: 100%;
+        font-size: 22px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.411);
+        border-radius: 10px;
+        border: 1px solid white;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.15s ease;
+    }
+    .buttonhome button:hover {
+    background-color: rgba(255, 255, 255, 0.158);
+    }
+    .buttonhome button:active {
+        background-color: rgba(255, 255, 255, 0.075);
+    }
+
+
+</style>
+<body>
+
+    <div class="total">
+
+        <div class="title">
+            <h1>Congratulation!</h1>
+            <p>Your total distance from <br> the correct position is:</p>
+            <p id="result"></p>
+        </div>
+
+        <div class="buttonhome">
+            <button onclick="home()">HOME</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        function home() {
+            window.location.href = "index.html";
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const p = document.getElementById("result");
+            let finalScore = localStorage.getItem("totalDistance");
+            
+            p.innerHTML = finalScore +" " +  "Km";
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&family=Zen+Dots&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+body {
+    background-image: url(bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.15s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 35px;
+    color: #b12338;
+    user-select: none;
+}
+.title i {
+    font-size: 60px;
+    cursor: pointer;
+}
+.title h1 {
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.164);
+    width: 430px;
+    height: 480px;
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 70%;
+}
+.input p {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    user-select: none;
+}
+
+.round {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.round div {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+.round div:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+.round div:active {
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    width: 80%;
+}
+.time p {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    user-select: none;
+}
+
+.times {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.times div {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+.times div:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+.times div:active {
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.button button {
+    width: 70%;
+    font-size: 22px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.411);
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+.button button:hover {
+    background-color: rgba(255, 255, 255, 0.158);
+}
+.button button:active {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.selected {
+    background-color: rgba(255, 255, 255, 0.411);
+}
+
+.loader {
+    position: absolute;
+    left: 48%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border: 5px solid transparent;
+    border-top: 7px solid #b12338;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
